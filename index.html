@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do To List</title>
+    <link rel="stylesheet" href="./css/scss/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-data">
+        <input type="text" placeholder="Write Your Task" />
+        <input type="date" />
+        <input type="submit" value="Add" />
+        <select name="filter" id="filter">
+          <optgroup label="filter">
+            <option value="all">All</option>
+            <option value="present">Present</option>
+            <option value="past">Past</option>
+            <option value="future">Future</option>
+            <option value="done">Done</option>
+            <option value="noDone">No done</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="show-data"></div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

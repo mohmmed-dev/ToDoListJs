@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: #00838f;
+  padding: 15px;
+  width: 90%;
+  position: relative;
+  border-radius: 6px;
+  overflow: auto;
+  height: calc(100vh - 20px);
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container .editing > input, .container > .input-data > select, .container > .input-data > input[type=submit], .container > .input-data > input[type=date], .container > .input-data > input[type=text] {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.5s ease-in-out;
+  border: none;
+  font-size: 18px;
+}
+.container .editing > input:focus, .container > .input-data > select:focus, .container > .input-data > input[type=submit]:focus, .container > .input-data > input[type=date]:focus, .container > .input-data > input[type=text]:focus {
+  outline: none;
+}
+.container .editing > input[type=submit], .container > .input-data > input[type=submit] {
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  transition: 0.5s ease-in;
+  font-size: 18px;
+}
+.container .editing > input[type=submit]:hover, .container > .input-data > input[type=submit]:hover {
+  background-color: white;
+  color: black;
+}
+.container > .input-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+.container > .input-data > input[type=text] {
+  width: 68%;
+  border: none;
+}
+.container > .input-data > input[type=text]::-moz-placeholder {
+  -moz-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+.container > .input-data > input[type=text]::placeholder {
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+.container > .input-data > input[type=date] {
+  width: 30%;
+  border: none;
+  cursor: pointer;
+}
+.container > .input-data > input[type=submit] {
+  width: 68%;
+}
+.container > .input-data > select {
+  padding: 10px;
+  width: 30%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.container > .input-data > select > option {
+  cursor: pointer;
+}
+.container > .show-data {
+  margin: 15px 0;
+}
+.container > .show-data .task {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-top: 20px;
+  position: relative;
+}
+.container > .show-data .task:not(:last-child) {
+  border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+}
+.container > .show-data .task.done {
+  color: black;
+  text-decoration: line-through;
+}
+.container > .show-data .task.done span {
+  background-color: white;
+  color: white;
+}
+.container > .show-data .task.done span img {
+  display: block;
+}
+.container > .show-data .task > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 50%;
+  margin: 0 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.container > .show-data .task > span img {
+  display: none;
+}
+.container > .show-data .task > .data-task {
+  display: flex;
+  align-items: center;
+  width: 82%;
+  padding: 10px 0;
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.container > .show-data .task > .data-task h4 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: normal;
+}
+.container > .show-data .task > .data-task p {
+  position: absolute;
+  top: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+.container > .show-data .task > .delete, .container > .show-data .task > .pen {
+  position: absolute;
+  cursor: pointer;
+  padding: 8px;
+}
+.container > .show-data .task > .pen {
+  right: 35px;
+}
+.container > .show-data .task > .delete {
+  right: 5px;
+}
+.container .editing {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.3019607843);
+}
+.container .editing > input {
+  margin: 5px 0;
+}
+.container .editing > input[type=submit] {
+  width: 80%;
+}/*# sourceMappingURL=style.css.map */
